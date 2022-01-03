@@ -6,7 +6,7 @@
 /*   By: foulare <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 14:34:12 by foulare           #+#    #+#             */
-/*   Updated: 2021/12/30 18:42:19 by foulare          ###   ########.fr       */
+/*   Updated: 2022/01/03 15:04:24 by foulare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ char	*get_next_line(int fd)
 	buf = NULL;
 	result = ft_remp(result, buf, fd);
 	if (!result)
-		return (0);
+		return (NULL);
 	if (result[ft_checkline(result)] == '\n')
 	{
 		line = ft_substr(result, 0, ft_checkline(result) + 1);
@@ -101,7 +101,7 @@ char	*get_next_line(int fd)
 	{
 		line = ft_strdup(result);
 		free(result);
-		return (0);
+		exit(1);
 	}
 	return (line);
 }

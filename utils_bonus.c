@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   destroy_split.c                                     :+:      :+:    :+:   */
+/*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: foulare <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/21 16:29:34 by foulare           #+#    #+#             */
-/*   Updated: 2021/12/29 14:34:38 by foulare          ###   ########.fr       */
+/*   Created: 2022/01/03 17:44:56 by foulare           #+#    #+#             */
+/*   Updated: 2022/01/03 17:44:58 by foulare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdlib.h>
 #include "push_swap.h"
 
@@ -56,7 +57,7 @@ int	get_maxindex(t_stack *a, int *i)
 	*i = 0;
 	temp = 0;
 	max = a->value;
-	while(a)
+	while (a)
 	{
 		if (max < a->value)
 		{
@@ -89,4 +90,3 @@ int	get_minindex(t_stack *a, int *tail)
 	}
 	return (temp);
 }
-

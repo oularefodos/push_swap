@@ -6,14 +6,14 @@
 /*   By: foulare <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 14:54:30 by foulare           #+#    #+#             */
-/*   Updated: 2021/12/30 18:26:16 by foulare          ###   ########.fr       */
+/*   Updated: 2022/01/03 15:57:26 by foulare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # include "libft/libft.h"
 
-typedef	struct data
+typedef struct data
 {
 	int	n;
 	int	pos;
@@ -22,8 +22,8 @@ typedef	struct data
 }	t_data;
 typedef struct pile
 {
-	int value;
-	struct pile *next;
+	long int	value;
+	struct pile	*next;
 }	t_stack;
 
 void	destroy_split(int n, char **str);
@@ -48,4 +48,6 @@ void	push_b(t_stack **stack, t_stack **stackpush);
 void	rotate_b(t_stack *stack);
 void	rrotate_b(t_stack *stack);
 char	*get_next_line(int fd);
+int		*remp_tab(t_stack *a, int *size);
+int		check_tab(int *tab, t_stack **a, int len, int *i);
 #endif
